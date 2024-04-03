@@ -8,6 +8,8 @@ cd ../server
 npm install
 cd ..
 npm run dev # This will run both frontend & backend at the same time
+
+// Go to http://localhost:3000 to verify the result
 ```
 
 # Environment Variables
@@ -57,6 +59,7 @@ npm run dev # This will run both frontend & backend at the same time
 
 # APIs
 ## 1. /api/login
+    // Request
     curl --location 'http://localhost:8000/api/login' \
     --header 'Content-Type: application/json' \
     --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhbmVAY3liZXJzcGVlZHdheS5uZXQiLCJtZXJjaGFudF9pZCI6MSwiaWF0IjoxNzEyMTI2MDE2LCJleHAiOjE3MTIxMjk2MTZ9.vyuxrDNdlKQru_Y4cb1fA7ErZqAegqqEwalciKLQA6w' \
@@ -64,7 +67,11 @@ npm run dev # This will run both frontend & backend at the same time
         "email": "ane@cyberspeedway.net",
         "password": "123456"
     }'
+
+    // Response
+    { token: <string> }
 ## 2. /api/search?keyword={string}
+    // Request
     curl --location --request GET 'http://localhost:8000/api/search?keyword=Low%20Top' \
     --header 'Content-Type: application/json' \
     --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhbmVAY3liZXJzcGVlZHdheS5uZXQiLCJtZXJjaGFudF9pZCI6MSwiaWF0IjoxNzEyMTI2MDE2LCJleHAiOjE3MTIxMjk2MTZ9.vyuxrDNdlKQru_Y4cb1fA7ErZqAegqqEwalciKLQA6w' \
@@ -72,3 +79,16 @@ npm run dev # This will run both frontend & backend at the same time
         "email": "ane@cyberspeedway.net",
         "password": "123456"
     }'
+
+    // Response
+    { [ shopify_orders ] }
+
+# Screenshots
+## Login Page
+![Login Page](./screenshots/login.png)
+
+## Orders Page
+![Orders Page](./screenshots/orders.png)
+
+## Database
+![Databasee](./screenshots/database.png)
