@@ -127,7 +127,7 @@ export default function OrdersPage() {
                           </td>
                           <td className="px-6 whitespace-nowrap">
                             {(line_items as any[]).map(item => (
-                              <div>
+                              <div key={item.id}>
                                 <div className="text-sm text-gray-700">
                                   <div className="font-medium">Name:</div> {item.name}
                                 </div>
