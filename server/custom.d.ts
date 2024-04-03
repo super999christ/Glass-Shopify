@@ -6,11 +6,11 @@ declare global {
       user: {
         id: number;
         email: string;
-      };
-      merchant: {
-        id: number;
-        storeName: string;
-        storeUrl: string;
+        merchant: {
+          id: number;
+          storeName: string;
+          storeUrl: string;
+        };
       };
     }
   }
